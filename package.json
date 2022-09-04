@@ -1,0 +1,60 @@
+{
+  "name": "campus-domain",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prestart": "rimraf dist",
+    "prebuild": "rimraf dist",
+    "build": "tsc --build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "NODE_ENV=production nodemon source/app.ts",
+    "start:dev": "NODE_ENV=development nodemon source/app.ts",
+    "start:debug": "NODE_ENV=development nodemon source/app.ts --debug",
+    "start:prod": "NODE_ENV=production node dist/app",
+    "lint": "eslint \"{source,apps,libs,test}/**/*.ts\" --fix",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' NODE_ENV=test mocha -r ts-node/register 'test/**/*.ts'",
+    "test:cov": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' NODE_ENV=test nyc mocha -r ts-node/register 'test/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "Julian Lasso <julian.lasso@sofka.com.co>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "ioredis": "^5.2.3",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.5.4",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.9",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/chai": "^4.3.3",
+    "@types/lodash": "^4.14.184",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.14",
+    "@types/sinon": "^10.0.13",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "sinon": "^14.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.2"
+  }
+}
