@@ -1,16 +1,16 @@
 {
-    "extends": "@tsconfig/node18/tsconfig.json",
-    "compilerOptions": {
-        "declaration": true,
-        "removeComments": true,
-        "sourceMap": true,
-        "outDir": "./dist",
-        "baseUrl": "./",
-        "allowSyntheticDefaultImports": true,
-        "strictNullChecks": true,
-        "noImplicitAny": true,
-        "strictBindCallApply": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-    }
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+      "declaration": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": "./",
+      "allowSyntheticDefaultImports": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "strictBindCallApply": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+  }
 }
