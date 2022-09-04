@@ -26,5 +26,8 @@ export class RedisClass {
       // password: env.BROKER_PASSWORD,
       db: parseInt(env.BROKER_DATABASE ?? '0'),
     });
+    setTimeout(() => {
+      console.log(`Redis is ${this._connection.status}`);
+    }, 100);
   }
 }
